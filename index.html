@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PerpustakaanKu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            📚 <span>PerpusKu</span>
+        </div>
+
+        <nav>
+            <a href="#" class="active">⌂ Beranda</a>
+            <a href="#buku">📖 Daftar Buku</a>
+            <a href="#">👥 Anggota</a>
+            <a href="#">🏷 Kategori</a>
+            <a href="#">📥 Peminjaman</a>
+            <a href="#">↩ Pengembalian</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>Selamat membaca dan menambah ilmu setiap hari!</p>
+            <button>Jelajahi Buku</button>
+        </div>
+    </aside>
+
+    <!-- Konten Utama -->
+    <main class="main">
+
+        <!-- Header -->
+        <header>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Cari buku...">
+            </div>
+
+            <div class="profile">
+                <span>🔔</span>
+                <div class="avatar">M</div>
+            </div>
+        </header>
+
+        <!-- Banner -->
+        <section class="banner">
+            <div class="banner-text">
+                <h1>Selamat Datang di Perpustakaan!</h1>
+                <p>Temukan berbagai buku menarik dan perluas wawasanmu.</p>
+                <button onclick="scrollBuku()">Lihat Koleksi</button>
+            </div>
+
+            <div class="banner-icon">📚</div>
+        </section>
+
+        <!-- Buku Populer -->
+        <section id="buku">
+            <div class="section-title">
+                <h2>Buku Populer</h2>
+                <span>Lihat Semua</span>
+            </div>
+
+            <div class="book-grid" id="bookList">
+
+                <div class="book-card">
+                    <div class="book-image orange">📘</div>
+                    <h3>Laskar Pelangi</h3>
+                    <p>Andrea Hirata</p>
+                    <button onclick="pinjam('Laskar Pelangi')">Pinjam</button>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-image pink">📕</div>
+                    <h3>Negeri 5 Menara</h3>
+                    <p>A. Fuadi</p>
+                    <button onclick="pinjam('Negeri 5 Menara')">Pinjam</button>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-image purple">📗</div>
+                    <h3>Bumi</h3>
+                    <p>Tere Liye</p>
+                    <button onclick="pinjam('Bumi')">Pinjam</button>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-image blue">📙</div>
+                    <h3>Filosofi Teras</h3>
+                    <p>Henry Manampiring</p>
+                    <button onclick="pinjam('Filosofi Teras')">Pinjam</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Buku Terbaru -->
+        <section>
+            <div class="section-title">
+                <h2>Buku Terbaru</h2>
+                <span>Lihat Semua</span>
+            </div>
+
+            <div class="book-grid">
+
+                <div class="book-card">
+                    <div class="book-image yellow">📔</div>
+                    <h3>Atomic Habits</h3>
+                    <p>James Clear</p>
+                    <button onclick="pinjam('Atomic Habits')">Pinjam</button>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-image green">📒</div>
+                    <h3>Hujan</h3>
+                    <p>Tere Liye</p>
+                    <button onclick="pinjam('Hujan')">Pinjam</button>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-image pink">📓</div>
+                    <h3>Ruang Sunyi</h3>
+                    <p>Penulis Indonesia</p>
+                    <button onclick="pinjam('Ruang Sunyi')">Pinjam</button>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-image purple">📚</div>
+                    <h3>Belajar Coding</h3>
+                    <p>Teknologi Digital</p>
+                    <button onclick="pinjam('Belajar Coding')">Pinjam</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Sidebar Kanan -->
+    <aside class="right-sidebar">
+
+        <div class="info-card">
+            <h3>📚 Statistik</h3>
+            <div class="stat">
+                <span>Total Buku</span>
+                <strong>50</strong>
+            </div>
+            <div class="stat">
+                <span>Buku Dipinjam</span>
+                <strong>0</strong>
+            </div>
+            <div class="stat">
+                <span>Anggota</span>
+                <strong>50</strong>`
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h3>Kategori Populer</h3>
+            <div class="category">📖 Novel <span>45 Buku</span></div>
+            <div class="category">💻 Teknologi <span>30 Buku</span></div>
+            <div class="category">🔬 Sains <span>25 Buku</span></div>
+            <div class="category">📜 Sejarah <span>20 Buku</span></div>
+        </div>
+
+    </aside>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
